@@ -1,0 +1,16 @@
+
+
+
+Create terraform code locally and deploy in Azure. Create all this in the same resource group so you can delete all together.
+
+    � VM without a public IP. Install nginx and set a listener on 443.
+    � Application load balancer with a self signed certificate that sends 443 traffic to the VM created above
+    � SQL database. Store db password in AKV
+    � AKV to store secrets
+    � Redis dev cache instance.
+    � subnet VM
+    � subnet for gateway
+    � private endpoint to the SQL database with auto DNS registration. 
+    � subnet for endpoints
+    - private dns zone for sql
+    � All subnets with a NSG
